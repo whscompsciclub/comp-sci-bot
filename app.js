@@ -9,13 +9,7 @@ client.login(process.env.BOT_TOKEN);
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
 
-    client.user.setActivity({
-        // status: "online",  //You can show online, idle....
-        // game: {
-            name: "bit.ly/compscilinktree",  //The message shown
-            type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
-        // }
-    });
+    client.user.setActivity('bit.ly/compscilinktree', { type: 'COMPETING' });
 
     // date stuff
     var date = new Date();
