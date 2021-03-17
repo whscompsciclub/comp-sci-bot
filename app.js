@@ -40,9 +40,9 @@ client.on('ready', () => {
 
         if(now.getDay() == 3){
             if(now.getHours() == 13){
-                if(now.getMinutes() == 0){
+                if(now.getMinutes() == 30){
                     console.log("wed 1:00")
-                    client.channels.cache.get(offtopic).send("its 1pm");
+                    client.channels.cache.get(offtopic).send("its 130pm");
                 }
             }
         }
