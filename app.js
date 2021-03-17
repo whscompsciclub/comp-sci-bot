@@ -15,10 +15,10 @@ client.on('ready', () => {
         // date stuff
         var date = new Date();
         var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
-        console.log(now.toLocaleString('en-US'));
-        console.log(now.getDay())
-        console.log(now.getHours())
-        console.log(now.getMinutes())
+        // console.log(now.toLocaleString('en-US'));
+        // console.log(now.getDay())
+        // console.log(now.getHours())
+        // console.log(now.getMinutes())
 
         if(now.getDay() == 2){ // tuesday
             if(now.getHours() == 15){ // 3pm
