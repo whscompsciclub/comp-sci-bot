@@ -1,12 +1,21 @@
 const Discord = require('discord.js');
-// const MessageEmbed = require('discord.js');
 require('dotenv').config();
+const offtopic = "754527701573959790";
+const announcement = "752336602570686554";
 
 const client = new Discord.Client();  
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
+
+    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "bit.ly/compscilinktree",  //The message shown
+            type: "PLAYING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
 
     // date stuff
     var date = new Date();
@@ -34,7 +43,7 @@ client.on('ready', () => {
 
     // // specific channel
     // if(1 == 2){
-    //     client.channels.cache.get("754527701573959790").send(`I am online, my name is ${client.user.username}`);
+    //     client.channels.cache.get(offtopic).send(`I am online, my name is ${client.user.username}`);
     // }
 
     // message embed
@@ -44,9 +53,9 @@ client.on('ready', () => {
     // .setAuthor()
     // .setDescription('Test description');
 
-    client.channels.cache.get("754527701573959790").send("test");
+    client.channels.cache.get(offtopic).send("@ everyone Meeting in 5 minutes");
 
-    // client.channels.cache.get("754527701573959790").send("Hello @everyone,\n", {embed: {
+    // client.channels.cache.get(offtopic).send("Hello @everyone,\n", {embed: {
     //     content: "Hello @everyone,\n",
     //     color: "0x69f0ae",
     //     author: {
@@ -76,7 +85,7 @@ client.on('ready', () => {
     //     }
     //   }
     // });
-    // client.channels.cache.get("754527701573959790").send(embed);
+    // client.channels.cache.get(offtopic).send(embed);
 });
 
 
