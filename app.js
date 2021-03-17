@@ -9,7 +9,7 @@ client.login(process.env.BOT_TOKEN);
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
 
-    client.user.setActivity({
+    client.user.setGame({
         status: "online",  //You can show online, idle....
         game: {
             name: "bit.ly/compscilinktree",  //The message shown
