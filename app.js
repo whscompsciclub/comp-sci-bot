@@ -11,7 +11,7 @@ client.on('ready', () => {
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
-    while(true){
+    // while(true){
         // date stuff
         var date = new Date();
         var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
@@ -46,7 +46,7 @@ client.on('ready', () => {
                 }
             }
         }
-    }
+    // }
     
 
     // // specific channel
