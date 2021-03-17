@@ -11,30 +11,41 @@ client.on('ready', () => {
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
-    // date stuff
-    var date = new Date();
-    var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
-    console.log(now.toLocaleString('en-US'));
-    console.log(now.getDay())
-    console.log(now.getHours())
-    console.log(now.getMinutes())
+    while(true){
+        // date stuff
+        var date = new Date();
+        var now = new Date();//date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
+        console.log(now.toLocaleString('en-US'));
+        console.log(now.getDay())
+        console.log(now.getHours())
+        console.log(now.getMinutes())
 
-    if(now.getDay() === 2){ // tuesday
-        if(now.getHours() === 15){ // 3pm
-            if(now.getMinutes() === 0){ // 0mins
-                console.log("tue 3:00pm")
+        if(now.getDay() === 2){ // tuesday
+            if(now.getHours() === 15){ // 3pm
+                if(now.getMinutes() === 0){ // 0mins
+                    console.log("tue 3:00pm")
+                }
+            }
+        }
+
+        if(now.getDay() === 3){ // wednesday
+            if(now.getHours() === 12){ // 12pm
+                if(now.getMinutes() === 30){ // 30mins
+                    console.log("wed 12:30pm")
+                    client.channels.cache.get(offtopic).send("@everyone Meeting in 5 minutes");
+                }
+            }
+        }
+
+        if(now.getDay() === 3){
+            if(now.getHours() === 12){
+                if(now.getMinutes() === 45){
+                    client.channels.cache.get(offtopic).send("its 12:45");
+                }
             }
         }
     }
-
-    if(now.getDay() === 3){ // wednesday
-        if(now.getHours() === 12){ // 12pm
-            if(now.getMinutes() === 30){ // 30mins
-                console.log("wed 12:30pm")
-                client.channels.cache.get(announcement).send("@everyone Meeting in 5 minutes");
-            }
-        }
-    }
+    
 
     // // specific channel
     // if(1 == 2){
