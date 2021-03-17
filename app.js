@@ -9,7 +9,7 @@ client.login(process.env.BOT_TOKEN);
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
 
-    client.user.setActivity('bit.ly/compscilinktree', { type: 'COMPETING' });
+    client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
     // date stuff
     var date = new Date();
@@ -47,7 +47,7 @@ client.on('ready', () => {
     // .setAuthor()
     // .setDescription('Test description');
 
-    client.channels.cache.get(offtopic).send("@ everyone Meeting in 5 minutes");
+    // client.channels.cache.get(offtopic).send("@ everyone Meeting in 5 minutes");
 
     // client.channels.cache.get(offtopic).send("Hello @everyone,\n", {embed: {
     //     content: "Hello @everyone,\n",
