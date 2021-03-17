@@ -37,10 +37,12 @@ client.on('ready', () => {
             }
         }
 
-        if(now.getDay() === 3){
-            if(now.getHours() === 12){
-                if(now.getMinutes() === 45){
-                    client.channels.cache.get(offtopic).send("its 12:45");
+        if(now.getDay() == 3){
+            if(now.getHours() == 12){
+                if(now.getMinutes() == 48){
+                    console.log("wed 12:45")
+                    client.channels.cache.get(offtopic).send("its 12:48");
+                    break;
                 }
             }
         }
