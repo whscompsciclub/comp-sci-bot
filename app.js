@@ -11,7 +11,7 @@ client.on('ready', () => {
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
-    // while(true){
+    while(true){
         // date stuff
         var date = new Date();
         var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
@@ -40,13 +40,13 @@ client.on('ready', () => {
 
         if(now.getDay() == 3){
             if(now.getHours() == 13){
-                if(now.getMinutes() == 30){
+                if(now.getMinutes() == 40){
                     console.log("wed 1:00")
-                    client.channels.cache.get(offtopic).send("its 130pm");
+                    client.channels.cache.get(offtopic).send("its 140pm");
                 }
             }
         }
-    // }
+    }
     
 
     // // specific channel
