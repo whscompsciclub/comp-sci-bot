@@ -31,6 +31,7 @@ client.on('ready', () => {
         if(now.getHours() === 12){ // 12pm
             if(now.getMinutes() === 30){ // 30mins
                 console.log("wed 12:30pm")
+                client.channels.cache.get(announcement).send("@everyone Meeting in 5 minutes");
             }
         }
     }
