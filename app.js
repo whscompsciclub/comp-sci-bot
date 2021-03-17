@@ -38,11 +38,14 @@ client.on('ready', () => {
             }
         }
 
-        if(now.getDay() == 3){
+        // boolean once = false;
+        if(now.getDay() == 3) {// && !once){
             if(now.getHours() == 13){
-                if(now.getMinutes() == 40){
+                if(now.getMinutes() == 46){
                     console.log("wed 1:00")
                     client.channels.cache.get(offtopic).send("its 140pm");
+                    setTimeout(1000);
+                    // once = true;
                 }
             }
         }
