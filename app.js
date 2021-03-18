@@ -1,55 +1,78 @@
 const Discord = require('discord.js');
+const schedule = require('node-schedule');
 require('dotenv').config();
+
 const offtopic = "754527701573959790";
 const announcement = "752336602570686554";
 
+
 const client = new Discord.Client();  
 client.login(process.env.BOT_TOKEN);
+
+// Tuesday 3pm
+const tue3 = schedule.scheduleJob('0 15 * * 2', function(){
+    console.log("0 15 * * 2 | Tuesday 3pm");
+    client.channels.cache.get(offtopic).send(`0 15 * * 2 | Tuesday 3pm`);
+});
+
+// Wednesday 12:30pm
+const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
+    console.log("30 12 * * 3 | Wednesday 12:30pm");
+    client.channels.cache.get(offtopic).send(`30 12 * * 3 | Wednesday 12:30pm`);
+});
+
+// test Thursday 2:15pm
+const job = schedule.scheduleJob('15 14 * * 4', function(){
+    console.log("15 14 * * 4");
+    client.channels.cache.get(offtopic).send(`15 14 * * 4 | Thursday 2:15pm`);
+});
 
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
-    while(true){
-        // date stuff
-        var date = new Date();
-        var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
-        // console.log(now.toLocaleString('en-US'));
-        // console.log(now.getDay())
-        // console.log(now.getHours())
-        // console.log(now.getMinutes())
+    tue3();
+    wed1230();
+    job();
 
-        if(now.getDay() == 2){ // tuesday
-            if(now.getHours() == 15){ // 3pm
-                if(now.getMinutes() == 0){ // 0mins
-                    console.log("tue 3:00pm")
-                    client.channels.cache.get(announcement).send("Hey @everyone,\n\n");
-                }
-            }
-        }
+    // // date stuff
+    // var date = new Date();
+    // var now = new Date(date.setTime(date.getTime() - (7 * 60 * 60 * 1000)));
+    // // console.log(now.toLocaleString('en-US'));
+    // // console.log(now.getDay())
+    // // console.log(now.getHours())
+    // // console.log(now.getMinutes())
 
-        if(now.getDay() == 3){ // wednesday
-            if(now.getHours() == 12){ // 12pm
-                if(now.getMinutes() == 30){ // 30mins
-                    console.log("wed 12:30pm")
-                    client.channels.cache.get(announcement).send("@everyone Meeting in 5 minutes");
-                }
-            }
-        }
+    // if(now.getDay() == 2){ // tuesday
+    //     if(now.getHours() == 15){ // 3pm
+    //         if(now.getMinutes() == 0){ // 0mins
+    //             console.log("tue 3:00pm")
+    //             client.channels.cache.get(announcement).send("Hey @everyone,\n\n");
+    //         }
+    //     }
+    // }
 
-        // boolean once = false;
-        if(now.getDay() == 3) {// && !once){
-            if(now.getHours() == 13){
-                if(now.getMinutes() == 46){
-                    console.log("wed 1:00")
-                    client.channels.cache.get(offtopic).send("its 140pm");
-                    setTimeout(1000);
-                    // once = true;
-                }
-            }
-        }
-    }
+    // if(now.getDay() == 3){ // wednesday
+    //     if(now.getHours() == 12){ // 12pm
+    //         if(now.getMinutes() == 30){ // 30mins
+    //             console.log("wed 12:30pm")
+    //             client.channels.cache.get(announcement).send("@everyone Meeting in 5 minutes");
+    //         }
+    //     }
+    // }
+
+    // // boolean once = false;
+    // if(now.getDay() == 3) {// && !once){
+    //     if(now.getHours() == 13){
+    //         if(now.getMinutes() == 46){
+    //             console.log("wed 1:00")
+    //             client.channels.cache.get(offtopic).send("its 140pm");
+    //             setTimeout(1000);
+    //             // once = true;
+    //         }
+    //     }
+    // }
     
 
     // // specific channel
