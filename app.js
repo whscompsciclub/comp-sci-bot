@@ -36,6 +36,30 @@ client.on('ready', () => {
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
+    // Tuesday 3pm
+    var tue3 = new CronJob(
+      '0 0 15 * * 2',
+      function(){
+          console.log("0 0 15 * * 2 | Tuesday 3pm");
+          client.channels.cache.get(offtopic).send(`0 0 15 * * 2 | Tuesday 3pm`);
+      },
+      null,
+      true,
+      'America/Los_Angeles'
+    );
+
+    // Wednesday 12:30pm
+    var wed1230 = new CronJob(
+        '0 30 12 * * 3',
+        function(){
+            console.log("0 30 12 * * 3 | Wednesday 12:30pm");
+            client.channels.cache.get(offtopic).send(`0 30 12 * * 3 | Wednesday 12:30pm`);
+        },
+        null,
+        true,
+        'America/Los_Angeles'
+      );
+
     // test Thursday 2:40pm
     var job = new CronJob(
         '0 45 14 * * 4',
