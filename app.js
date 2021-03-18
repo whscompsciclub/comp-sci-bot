@@ -22,9 +22,9 @@ const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
 });
 
 // test Thursday 2:15pm
-const job = schedule.scheduleJob('18 14 * * 4', function(){
+const job = schedule.scheduleJob('21 14 * * 4', function(){
     console.log("18 14 * * 4");
-    client.channels.cache.get(offtopic).send(`18 14 * * 4 | Thursday 2:18pm`);
+    client.channels.cache.get(announcement).send(`21 14 * * 4 | Thursday 2:21pm`);
 });
 
 client.on('ready', () => {
