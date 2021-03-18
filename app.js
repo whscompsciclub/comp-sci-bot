@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
-const schedule = require('node-schedule');
+// const schedule = require('node-schedule');
+const CronJob = require('cron').CronJob;
 require('dotenv').config();
 
 const offtopic = "754527701573959790";
@@ -10,27 +11,42 @@ const client = new Discord.Client();
 client.login(process.env.BOT_TOKEN);
 
 // Tuesday 3pm
-const tue3 = schedule.scheduleJob('0 15 * * 2', function(){
-    console.log("0 15 * * 2 | Tuesday 3pm");
-    client.channels.cache.get(offtopic).send(`0 15 * * 2 | Tuesday 3pm`);
-});
+
+// const tue3 = schedule.scheduleJob('0 15 * * 2', function(){
+//     console.log("0 15 * * 2 | Tuesday 3pm");
+//     client.channels.cache.get(offtopic).send(`0 15 * * 2 | Tuesday 3pm`);
+// });
 
 // Wednesday 12:30pm
-const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
-    console.log("30 12 * * 3 | Wednesday 12:30pm");
-    client.channels.cache.get(offtopic).send(`30 12 * * 3 | Wednesday 12:30pm`);
-});
+
+// const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
+//     console.log("30 12 * * 3 | Wednesday 12:30pm");
+//     client.channels.cache.get(offtopic).send(`30 12 * * 3 | Wednesday 12:30pm`);
+// });
 
 // test Thursday 2:15pm
-const job = schedule.scheduleJob('21 14 * * 4', function(){
-    console.log("18 14 * * 4");
-    client.channels.cache.get(announcement).send(`21 14 * * 4 | Thursday 2:21pm`);
-});
+
+// const job = schedule.scheduleJob('21 14 * * 4', function(){
+//     console.log("18 14 * * 4");
+//     client.channels.cache.get(announcement).send(`21 14 * * 4 | Thursday 2:21pm`);
+// });
 
 client.on('ready', () => {
     console.log(`I am online, my name is ${client.user.username}`);
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
+
+    // test Thursday 2:40pm
+    var job = new CronJob(
+        '0 45 14 * * 4',
+        function(){
+            console.log("0 45 14 * * 4 | Thursday 2:45pm | Scheduled 10 mins ago");
+            client.channels.cache.get(offtopic).send(`0 45 14 * * 4 | Thursday 2:45pm | Scheduled 10 mins ago`);
+        },
+        null,
+        true,
+        'America/Los_Angeles'
+    );
 
     // tue3();
     // wed1230();
