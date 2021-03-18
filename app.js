@@ -22,9 +22,9 @@ const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
 });
 
 // test Thursday 2:15pm
-const job = schedule.scheduleJob('15 14 * * 4', function(){
-    console.log("15 14 * * 4");
-    client.channels.cache.get(offtopic).send(`15 14 * * 4 | Thursday 2:15pm`);
+const job = schedule.scheduleJob('18 14 * * 4', function(){
+    console.log("18 14 * * 4");
+    client.channels.cache.get(offtopic).send(`18 14 * * 4 | Thursday 2:18pm`);
 });
 
 client.on('ready', () => {
@@ -32,9 +32,9 @@ client.on('ready', () => {
 
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
-    tue3();
-    wed1230();
-    job();
+    // tue3();
+    // wed1230();
+    // job();
 
     // // date stuff
     // var date = new Date();
