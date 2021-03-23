@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const CronJob = require('cron').CronJob;
 require('dotenv').config();
 
-const offtopic = "754527701573959790";
+const testing = "764611297765228584";
 const announcement = "752336602570686554";
 
 
@@ -14,14 +14,14 @@ client.login(process.env.BOT_TOKEN);
 
 // const tue3 = schedule.scheduleJob('0 15 * * 2', function(){
 //     console.log("0 15 * * 2 | Tuesday 3pm");
-//     client.channels.cache.get(offtopic).send(`0 15 * * 2 | Tuesday 3pm`);
+//     client.channels.cache.get(testing).send(`0 15 * * 2 | Tuesday 3pm`);
 // });
 
 // Wednesday 12:30pm
 
 // const wed1230 = schedule.scheduleJob('30 12 * * 3', function(){
 //     console.log("30 12 * * 3 | Wednesday 12:30pm");
-//     client.channels.cache.get(offtopic).send(`30 12 * * 3 | Wednesday 12:30pm`);
+//     client.channels.cache.get(testing).send(`30 12 * * 3 | Wednesday 12:30pm`);
 // });
 
 // test Thursday 2:15pm
@@ -41,7 +41,7 @@ client.on('ready', () => {
       '0 0 15 * * 2',
       function(){
           console.log("0 0 15 * * 2 | Tuesday 3pm");
-          client.channels.cache.get(offtopic).send(`0 0 15 * * 2 | Tuesday 3pm`);
+          client.channels.cache.get(testing).send(`0 0 15 * * 2 | Tuesday 3pm`);
       },
       null,
       true,
@@ -53,7 +53,7 @@ client.on('ready', () => {
         '0 30 12 * * 3',
         function(){
             console.log("0 30 12 * * 3 | Wednesday 12:30pm");
-            client.channels.cache.get(offtopic).send(`0 30 12 * * 3 | Wednesday 12:30pm`);
+            client.channels.cache.get(testing).send(`0 30 12 * * 3 | Wednesday 12:30pm`);
         },
         null,
         true,
@@ -62,10 +62,10 @@ client.on('ready', () => {
 
     // test Thursday 2:40pm
     var job = new CronJob(
-        '0 45 14 * * 4',
+        '0 05 18 * * 1',
         function(){
             console.log("0 45 14 * * 4 | Thursday 2:45pm | Scheduled 10 mins ago");
-            client.channels.cache.get(offtopic).send(`0 45 14 * * 4 | Thursday 2:45pm | Scheduled 10 mins ago`);
+            client.channels.cache.get(testing).send(`Hello @ everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be continuing to review USACO by going over the January 2017 contest. We hope to see you all on Wednesday!\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
         },
         null,
         true,
@@ -107,7 +107,7 @@ client.on('ready', () => {
     //     if(now.getHours() == 13){
     //         if(now.getMinutes() == 46){
     //             console.log("wed 1:00")
-    //             client.channels.cache.get(offtopic).send("its 140pm");
+    //             client.channels.cache.get(testing).send("its 140pm");
     //             setTimeout(1000);
     //             // once = true;
     //         }
@@ -117,7 +117,7 @@ client.on('ready', () => {
 
     // // specific channel
     // if(1 == 2){
-    //     client.channels.cache.get(offtopic).send(`I am online, my name is ${client.user.username}`);
+    //     client.channels.cache.get(testing).send(`I am online, my name is ${client.user.username}`);
     // }
 
     // message embed
@@ -127,9 +127,9 @@ client.on('ready', () => {
     // .setAuthor()
     // .setDescription('Test description');
 
-    // client.channels.cache.get(offtopic).send("@ everyone Meeting in 5 minutes");
+    // client.channels.cache.get(testing).send("@ everyone Meeting in 5 minutes");
 
-    // client.channels.cache.get(offtopic).send("Hello @everyone,\n", {embed: {
+    // client.channels.cache.get(testing).send("Hello @everyone,\n", {embed: {
     //     content: "Hello @everyone,\n",
     //     color: "0x69f0ae",
     //     author: {
@@ -159,7 +159,7 @@ client.on('ready', () => {
     //     }
     //   }
     // });
-    // client.channels.cache.get(offtopic).send(embed);
+    // client.channels.cache.get(testing).send(embed);
 });
 
 
