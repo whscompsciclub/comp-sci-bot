@@ -62,10 +62,10 @@ client.on('ready', () => {
 
     // test Thursday 2:40pm
     var job = new CronJob(
-        '0 05 18 * * 1',
+        '0 08 18 * * 1',
         function(){
             console.log("0 45 14 * * 4 | Thursday 2:45pm | Scheduled 10 mins ago");
-            client.channels.cache.get(testing).send(`Hello @ everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be continuing to review USACO by going over the January 2017 contest. We hope to see you all on Wednesday!\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+            client.channels.cache.get(testing).send(`Hello @ everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be continuing to review USACO by going over the January 2017 contest.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
         },
         null,
         true,
