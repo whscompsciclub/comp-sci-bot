@@ -41,7 +41,7 @@ client.on('ready', () => {
       '0 0 15 * * 2',
       function(){
           console.log("0 0 15 * * 2 | Tuesday 3pm");
-          client.channels.cache.get(testing).send(`0 0 15 * * 2 | Tuesday 3pm`);
+          client.channels.cache.get(announcement).send(`Hello @ everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be continuing to review USACO by going over the January 2017 contest.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
       },
       null,
       true,
