@@ -14,7 +14,7 @@ client.on('ready', () => {
     var tue330 = new CronJob(
       '0 30 15 * * 2',
       function(){
-          client.channels.cache.get(announcement).send(`Hello @everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be continuing to review USACO by going over the January 2017 contest.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+          client.channels.cache.get(announcement).send(`Hello @everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be using Python to create algorithms to beat other bots in a rock paper scissors round-robin tournament.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
       },
       null,
       true,
