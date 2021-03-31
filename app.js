@@ -22,15 +22,15 @@ client.on('ready', () => {
     // );
 
     // Wednesday 12:30pm
-    var wed1230 = new CronJob(
-        '0 30 12 * * 3',
-        function(){
-            client.channels.cache.get(announcement).send(`@everyone Meeting in 5 minutes!`);
-        },
-        null,
-        true,
-        'America/Los_Angeles'
-      );
+    // var wed1230 = new CronJob(
+    //     '0 30 12 * * 3',
+    //     function(){
+    //         client.channels.cache.get(announcement).send(`@everyone Meeting in 5 minutes!`);
+    //     },
+    //     null,
+    //     true,
+    //     'America/Los_Angeles'
+    //   );
 
     // USACO start
     // client.channels.cache.get(announcement).send(`@everyone US Open has opened ...`);
