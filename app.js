@@ -23,7 +23,14 @@ client.on('ready', () => {
         if (user.bot) return;
         if (!reaction.message.guild) return;
         if (reaction.message.channel.id == '868641180559233064') {
+            
+            console.log("hi");
+            console.log(reaction.emoji.name)
+
             if (reaction.emoji.name === '🐦') {
+
+                console.log("in here!")
+
                 await reaction.message.guild.members.cache
                 .get(user.id)
                 .roles.add('752606031988785192');
