@@ -4,17 +4,17 @@ require('dotenv').config();
 
 const announcement = "752336602570686554";
 
-const client = new Discord.Client();  
+const client = new Discord.Client({
+    partials: ['MESSAGE', 'REACTION', 'CHANNEL'],
+});
 client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     // activity status
-    client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
+    client.user.setActivity('bit.ly/compscilinktree', { type: 'PLAYING' });
 
     // reaction roles
-    const client = new Discord.Client({
-        partials: ['MESSAGE', 'REACTION', 'CHANNEL'],
-    });
+    
 
     // Adding reaction-role function
     client.on('messageReactionAdd', async (reaction, user) => {
