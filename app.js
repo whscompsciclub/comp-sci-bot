@@ -68,7 +68,7 @@ client.on('ready', () => {
                 .get(user.id)
                 .roles.add('771150358164668436');
             }
-            if (reaction.emoji.name === '🎖') {
+            if (reaction.emoji.name === '🧠') {
                 await reaction.message.guild.members.cache
                 .get(user.id)
                 .roles.add('791333902123139143');
@@ -128,7 +128,7 @@ client.on('ready', () => {
                 .get(user.id)
                 .roles.remove('771150358164668436');
             }
-            if (reaction.emoji.name === '🎖') {
+            if (reaction.emoji.name === '🧠') {
                 await reaction.message.guild.members.cache
                 .get(user.id)
                 .roles.remove('791333902123139143');
