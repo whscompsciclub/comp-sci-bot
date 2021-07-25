@@ -23,27 +23,55 @@ client.on('ready', () => {
         if (user.bot) return;
         if (!reaction.message.guild) return;
         if (reaction.message.channel.id == '868641180559233064') {
-            
-            console.log("hi");
-            console.log(reaction.emoji.name)
-
             if (reaction.emoji.name === '🐦') {
-
-                console.log("in here!")
-
                 await reaction.message.guild.members.cache
                 .get(user.id)
                 .roles.add('752606031988785192');
             }
-            if (reaction.emoji.name === '🐯') {
+            if (reaction.emoji.name === '1️⃣') {
                 await reaction.message.guild.members.cache
                 .get(user.id)
-                .roles.add('802208242696192040');
+                .roles.add('753687984091693067');
             }
-            if (reaction.emoji.name === '🐍') {
+            if (reaction.emoji.name === '2️⃣') {
                 await reaction.message.guild.members.cache
                 .get(user.id)
-                .roles.add('802208314766524526');
+                .roles.add('753688089959989259');
+            }
+            if (reaction.emoji.name === '3️⃣') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('753688141252001812');
+            }
+            if (reaction.emoji.name === '📷') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('764607752554938378');
+            }
+            if (reaction.emoji.name === '🕘') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('771150360425398302');
+            }
+            if (reaction.emoji.name === '🕙') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('771150352107044865');
+            }
+            if (reaction.emoji.name === '🕚') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('771150354166710292');
+            }
+            if (reaction.emoji.name === '🕛') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('771150358164668436');
+            }
+            if (reaction.emoji.name === '🎖') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.add('791333902123139143');
             }
         } else return;
     });
@@ -55,21 +83,56 @@ client.on('ready', () => {
         if (user.bot) return;
         if (!reaction.message.guild) return;
         if (reaction.message.channel.id == '868641180559233064') {
-        if (reaction.emoji.name === '🐦') {
-            await reaction.message.guild.members.cache
-            .get(user.id)
-            .roles.remove('752606031988785192');
-        }
-        if (reaction.emoji.name === '🐯') {
-            await reaction.message.guild.members.cache
-            .get(user.id)
-            .roles.remove('802208242696192040');
-        }
-        if (reaction.emoji.name === '🐍') {
-            await reaction.message.guild.members.cache
-            .get(user.id)
-            .roles.remove('802208314766524526');
-        }
+            if (reaction.emoji.name === '🐦') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('752606031988785192');
+            }
+            if (reaction.emoji.name === '1️⃣') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('753687984091693067');
+            }
+            if (reaction.emoji.name === '2️⃣') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('753688089959989259');
+            }
+            if (reaction.emoji.name === '3️⃣') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('753688141252001812');
+            }
+            if (reaction.emoji.name === '📷') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('764607752554938378');
+            }
+            if (reaction.emoji.name === '🕘') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('771150360425398302');
+            }
+            if (reaction.emoji.name === '🕙') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('771150352107044865');
+            }
+            if (reaction.emoji.name === '🕚') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('771150354166710292');
+            }
+            if (reaction.emoji.name === '🕛') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('771150358164668436');
+            }
+            if (reaction.emoji.name === '🎖') {
+                await reaction.message.guild.members.cache
+                .get(user.id)
+                .roles.remove('791333902123139143');
+            }
         } else return;
     });
 
