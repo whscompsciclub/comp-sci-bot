@@ -16,9 +16,10 @@ client.on('ready', () => {
 
     // client.channels.cache.get("868644512757604372").send(`?`);
 
+    console.log("hi man")
 
     // new member
-    client.on('guildMemberAdd', async member => {
+    client.on('guildMemberAdd', member => {
         console.log("howdy")
         client.channels.cache.get("868644512757604372").send(`Welcome`);
     });
