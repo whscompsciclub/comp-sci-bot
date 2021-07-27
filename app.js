@@ -11,10 +11,11 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     // activity status
-    client.user.setActivity('bit.ly/compscilinktree', { type: 'PLAYING' });
+    client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
     // new member
     client.on('guildMemberAdd', member => {
+        console.log("howdy")
         client.channels.cache.get("868644512757604372").send(`Welcome ${member}`);
     });
     
