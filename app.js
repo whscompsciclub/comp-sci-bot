@@ -16,7 +16,7 @@ client.on('ready', () => {
     // new member
     client.on('guildMemberAdd', member => {
         client.channels.cache.get("868644512757604372").send(`Welcome ${member} | Check out <#868640851578998845>, <#752336985250725888>, <#868641180559233064>, and change your nickname to your real name!`);
-        member.id.roles.add('752342157200719894');
+        member.roles.add("752342157200719894");
     });
     
 
