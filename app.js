@@ -13,6 +13,10 @@ client.on('ready', () => {
     // activity status
     client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
 
+
+    client.channels.cache.get("868644512757604372").send(`?`);
+
+
     // new member
     client.on('guildMemberAdd', member => {
         console.log("howdy")
