@@ -13,16 +13,9 @@ client.on('ready', () => {
     // activity status
     client.user.setActivity('bit.ly/compscilinktree', { type: 'LISTENING' });
 
-
-    // client.channels.cache.get("868644512757604372").send(`?`);
-
-    console.log("hi man")
-
     // new member
     client.on('guildMemberAdd', member => {
-        console.log("howdy")
-        client.channels.cache.get("868644512757604372").send(`Welcome`);
-        return;
+        client.channels.cache.get("868644512757604372").send(`Welcome ${member} | Check out <#868640851578998845>, <#752336985250725888>, and <#868641180559233064>`);
     });
     
 
