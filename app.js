@@ -13,7 +13,10 @@ client.on('ready', () => {
     // activity status
     client.user.setActivity('bit.ly/compscilinktree', { type: 'PLAYING' });
 
-    // reaction roles
+    // new member
+    client.on('guildMemberAdd', member => {
+        client.channels.cache.get("868644512757604372").send(`Welcome ${member}`);
+    });
     
 
     // Adding reaction-role function
