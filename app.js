@@ -11,7 +11,7 @@ client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () => {
     // activity status
-    client.user.setActivity('bit.ly/compscilinktree', { type: 'WATCHING' });
+    client.user.setActivity('bit.ly/compscilinktree', { type: 'LISTENING' });
 
 
     // client.channels.cache.get("868644512757604372").send(`?`);
@@ -22,6 +22,7 @@ client.on('ready', () => {
     client.on('guildMemberAdd', member => {
         console.log("howdy")
         client.channels.cache.get("868644512757604372").send(`Welcome`);
+        return;
     });
     
 
