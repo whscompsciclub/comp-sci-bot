@@ -20,6 +20,9 @@ client.on('ready', () => {
         member.roles.add("752677539243098224");
     });
     
+    client.on('guildMemberRemove', member => {
+        client.channels.cache.get("754527701573959790").send(`${member} dipped`);
+    });
 
     // Adding reaction-role function
     client.on('messageReactionAdd', async (reaction, user) => {
