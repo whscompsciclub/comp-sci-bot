@@ -3,11 +3,11 @@
 - created using the [discord.js](https://discord.js.org/?source=post_page---------------------------#/) npm package
 
 ### To Do List
-- [ ] Roles
-- [ ] Welcome Messages
 - [ ] Commands
 - [ ] Replace the Other Bots Currently in Use
 - [ ] Better User Interface?
 
 ### Completed
 - [x] Scheduled Announcements
+- [x] Roles
+- [x] Welcome Messages
