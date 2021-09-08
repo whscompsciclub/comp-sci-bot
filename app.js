@@ -158,18 +158,18 @@ client.on('ready', () => {
 
     
 
-    // Wednesday 12:30pm
-    var wed1230 = new CronJob(
-        '0 0 14 * * 3',
-        function(){
-            client.channels.cache.get(announcement).send(`@everyone ​Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`);
-        },
-        null,
-        true,
-        'America/Los_Angeles'
-    );
+    // // Wednesday 12:30pm
+    // var wed1230 = new CronJob(
+    //     '0 0 14 * * 3',
+    //     function(){
+    //         client.channels.cache.get(announcement).send(`@everyone ​Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`);
+    //     },
+    //     null,
+    //     true,
+    //     'America/Los_Angeles'
+    // );
 
-    client.channels.cache.get("752334786260893697").send(`Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`)
+    // client.channels.cache.get("752334786260893697").send(`Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`)
 
     // USACO start
     // client.channels.cache.get(announcement).send(`**<@&791333902123139143> returns on Friday! (TOMORROW)**: last comp of this *season*\n\nThe 2021 USACO Open contest will begin this Friday. Competitors will have **five hours** to solve three problems; high scorers will receive promotions to the next division, with perfect scorers being promoted in-contest and earning the right to take the next division's contest within the Open competition period. More info here: <http://usaco.org>\n\nAs a reminder, **no discussion** of the problems or the contest is allowed.\n\n<#752339796340244602> has been locked\n\nIf you have questions about the contest, contact the organizers at the email address listed on the website in the contest rules or message an officer.\n\nBest of Luck!!! :cow:`);
