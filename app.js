@@ -147,9 +147,9 @@ client.on('ready', () => {
 
 
     var tue330 = new CronJob(
-        '0 57 22 * * 1',
+        '0 0 23 * * 1',
         function(){
-            client.channels.cache.get(announcement).send(`Hello @everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+            client.channels.cache.get(announcement).send(`Hello @member,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
         },
         null,
         true,
