@@ -147,9 +147,10 @@ client.on('ready', () => {
 
 
     var tue330 = new CronJob(
-        '0 0 23 * * 1',
+        '0 5 23 * * 1',
         function(){
-            client.channels.cache.get(announcement).send(`Hello @member,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+            // client.channels.cache.get(announcement).send(`Hello <@&752342157200719894>,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+            client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting today at lunch! (if you missed our email, we're switching to Tues instead of Thurs)`);
         },
         null,
         true,
@@ -162,7 +163,7 @@ client.on('ready', () => {
     var wed1230 = new CronJob(
         '0 45 10 * * 2',
         function(){
-            client.channels.cache.get(announcement).send(`@member Meeting today at lunch! (if you missed our email, we're switching to Tues instead of Thurs)`);
+            client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting today at lunch! (if you missed our email, we're switching to Tues instead of Thurs)`);
         },
         null,
         true,
