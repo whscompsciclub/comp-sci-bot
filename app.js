@@ -145,29 +145,29 @@ client.on('ready', () => {
     });
 
 
-    // Tuesday 3:30pm
-    // var tue330 = new CronJob(
-    //   '0 30 15 * * 2',
-    //   function(){
-    //       client.channels.cache.get(announcement).send(`Hello @everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
-    //   },
-    //   null,
-    //   true,
-    //   'America/Los_Angeles'
-    // );
+
+    var tue330 = new CronJob(
+        '0 57 22 * * 1',
+        function(){
+            client.channels.cache.get(announcement).send(`Hello @everyone,\n\nMeeting at lunch (12:35) tomorrow! We will be going over the past 2021 US Open then finishing our Rock Paper Scissor Competition.\n\nZoom Link: https://bit.ly/whscompscizoom\nPassword: **compsci**\n\nSee you there!`);
+        },
+        null,
+        true,
+        'America/Los_Angeles'
+    );
 
     
 
-    // // Wednesday 12:30pm
-    // var wed1230 = new CronJob(
-    //     '0 0 14 * * 3',
-    //     function(){
-    //         client.channels.cache.get(announcement).send(`@everyone ​Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`);
-    //     },
-    //     null,
-    //     true,
-    //     'America/Los_Angeles'
-    // );
+
+    var wed1230 = new CronJob(
+        '0 45 10 * * 2',
+        function(){
+            client.channels.cache.get(announcement).send(`@member Meeting today at lunch! (if you missed our email, we're switching to Tues instead of Thurs)`);
+        },
+        null,
+        true,
+        'America/Los_Angeles'
+    );
 
     // client.channels.cache.get("752334786260893697").send(`Our first meeting will be during Lunch tomorrow (Thursday 9/9) in room F1 (Blackford). See you there!`)
 
