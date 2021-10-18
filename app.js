@@ -161,9 +161,9 @@ client.on('ready', () => {
 
 
     var wed1230 = new CronJob(
-        '0 45 10 * * 2',
+        '0 0 19 * * 1',
         function(){
-            client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting today at lunch! (if you missed our email, we're switching to **Tues.** instead of Thurs)`);
+            client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting **tomorrow** at lunch! (we're switching to **Tues.** instead of Thurs from now on)`);
         },
         null,
         true,
