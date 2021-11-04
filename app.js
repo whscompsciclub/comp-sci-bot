@@ -163,7 +163,7 @@ client.on('ready', () => {
     var wed1230 = new CronJob(
         '0 0 19 * * 1',
         function(){
-            client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting **tomorrow** at lunch in Room F1)! (**Tues.** instead of Thurs)`);
+            // client.channels.cache.get(announcement).send(`<@&752342157200719894> Meeting **tomorrow** at lunch in Room F1)! (**Tues.** instead of Thurs)`);
         },
         null,
         true,
