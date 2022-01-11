@@ -163,7 +163,7 @@ client.on('ready', () => {
     var wed1230 = new CronJob(
         '0 0 22 * * 1',
         function(){
-            client.channels.cache.get(announcement).send(`<@&752342157200719894> We're going to be moving our Tue lunch meetings -> zoom at Sunday 7pm starting this week! Look out for the link on Sunday`);
+            // client.channels.cache.get(announcement).send(`<@&752342157200719894> We're going to be moving our Tue lunch meetings -> **zoom at Sunday 7pm** starting this week! Look out for the link on Sunday`);
         },
         null,
         true,
