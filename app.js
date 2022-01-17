@@ -169,10 +169,10 @@ client.on('ready', () => {
     );
 
     var sun = new CronJob(
-        '0 0 18 * * 0', // 0 0 19 * * 0
+        '0 0 19 * * 0', // 0 0 19 * * 0
         function(){
-            // client.channels.cache.get(announcement).send(`<@&752342157200719894> same as below`);
-            client.channels.cache.get("868646100318425148").send(`<@&752342157200719894> zoom link: https://bit.ly/whscsczoom`);
+            client.channels.cache.get(announcement).send(`<@&752342157200719894> zoom link: https://bit.ly/whscsczoom`);
+            // client.channels.cache.get("868646100318425148").send(`<@&752342157200719894> zoom link: https://bit.ly/whscsczoom`);
         },
         null,
         true,
