@@ -21,7 +21,7 @@ client.on('ready', () => {
     });
     
     client.on('guildMemberRemove', member => {
-        client.channels.cache.get("754527701573959790").send(`${member} dipped`);
+        // client.channels.cache.get("754527701573959790").send(`${member} dipped`);
     });
 
     // Adding reaction-role function
