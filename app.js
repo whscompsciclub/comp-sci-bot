@@ -169,10 +169,10 @@ client.on('ready', () => {
     );
 
     var sun = new CronJob(
-        '0 0 10 * * 2', // 0 0 19 * * 0
+        '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             // client.channels.cache.get("752334786260893697").send(`<@&752342157200719894> zoom link: https://bit.ly/whscsczoom`);
-            // client.channels.cache.get(announcement).send(`Hi @everyone! We are now accepting applications for the 2022 - 2023 WHS Comp Sci Club Officer Team! (no exp needed)\n\nApplications can be found here: <https://forms.gle/jbJjGfiZdCL3eXp69>`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! Just a reminder we have a meeting at lunch in F1 today. See you there!`);
         },
         null,
         true,
