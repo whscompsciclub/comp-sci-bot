@@ -172,7 +172,7 @@ client.on('ready', () => {
         '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             // client.channels.cache.get("752334786260893697").send(`<@&752342157200719894> zoom link: https://bit.ly/whscsczoom`);
-            // client.channels.cache.get(announcement).send(`Hi @everyone! Just a reminder we have a meeting at lunch in F1 today. See you there!`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! Just a reminder we have a meeting at lunch in F1 today. See you there!`);
         },
         null,
         true,
