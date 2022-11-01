@@ -172,7 +172,7 @@ client.on('ready', () => {
         '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            // client.channels.cache.get(announcement).send(`Hi @everyone! Just a reminder we have a meeting at lunch in F1 today. See you there!`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! Just a reminder we have a meeting at lunch in F1 today. See you there! **Also, our picture day is November 15th during Lunch!**`);
         },
         null,
         true,
