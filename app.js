@@ -172,7 +172,7 @@ client.on('ready', () => {
         '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            client.channels.cache.get(announcement).send(`Hi @everyone! **Please go to the PAC at the start of lunch for club pictures!**`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! **Please go to the Peforming Arts Center at the start of lunch for club pictures!**`);
         },
         null,
         true,
