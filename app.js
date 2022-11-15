@@ -162,7 +162,7 @@ client.on('ready', () => {
         '0 0 6 * * 2',
         function(){
             // client.channels.cache.get(announcement).send(`<@&752342157200719894> We're going to be moving our Tue lunch meetings -> **zoom at Sunday 7pm** starting this week! Look out for the link on Sunday`);
-            client.channels.cache.get(announcement).send(`Hi @everyone! **Wear dark colors today and go to the Peforming Arts Center at the start of lunch for club pictures!**`);
+            // client.channels.cache.get(announcement).send(`Hi @everyone! **Wear dark colors today and go to the Peforming Arts Center at the start of lunch for club pictures!**`);
         },
         null,
         true,
@@ -173,7 +173,7 @@ client.on('ready', () => {
         '0 55 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            client.channels.cache.get(announcement).send(`Hi @everyone! **Please go to the PAC for pictures!**`);
+            // client.channels.cache.get(announcement).send(`Hi @everyone! **Please go to the PAC for pictures!**`);
         },
         null,
         true,
