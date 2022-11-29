@@ -170,10 +170,10 @@ client.on('ready', () => {
     );
 
     var sun = new CronJob(
-        '0 55 11 * * 2', // 0 0 19 * * 0
+        '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            // client.channels.cache.get(announcement).send(`Hi @everyone! **Please go to the PAC for pictures!**`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! **NO meeting today.** Our next and last meeting of the semester will be next Tuesady (12/06)`);
         },
         null,
         true,
