@@ -173,7 +173,7 @@ client.on('ready', () => {
         '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            client.channels.cache.get(announcement).send(`Hi @everyone! **NO meeting today.** Our last meeting of the semester will be next Tuesady (12/06)`);
+            client.channels.cache.get(announcement).send(`Hi @everyone! Meeting today in F1! This will be our last meeting of the semester!!!`);
         },
         null,
         true,
