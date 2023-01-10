@@ -173,7 +173,7 @@ client.on('ready', () => {
         '0 45 11 * * 2', // 0 0 19 * * 0
         function(){
             
-            // client.channels.cache.get(announcement).send(`Hi @everyone! **Sorry NO Meeting today** (Mr. Blackford's not here). Happy Holidays! See you next year!!!`);
+             client.channels.cache.get(announcement).send(`Hi @everyone! **Meeting today** in Room F1 (Mr. Blackford). See you there!!! Time to advent some code :D`);
         },
         null,
         true,
